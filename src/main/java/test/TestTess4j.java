@@ -12,6 +12,8 @@ public class TestTess4j {
 		
 		ITesseract instance = new Tesseract();
 		
+		instance.setDatapath(args[1]);
+		
 		try {
 			
 			System.out.println(instance.doOCR(imageFile));
