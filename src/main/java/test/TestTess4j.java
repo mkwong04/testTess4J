@@ -14,6 +14,13 @@ public class TestTess4j {
 		
 		instance.setDatapath(args[1]);
 		
+		if(args.length>2) {
+			int ocrEngineMode = Integer.valueOf(args[2]);
+			
+			ocrEngineMode = (ocrEngineMode>2 || ocrEngineMode<0) ? 3 : ocrEngineMode;
+			instance.setOcrEngineMode(ocrEngineMode);
+		}
+
 		try {
 			
 			System.out.println(instance.doOCR(imageFile));
