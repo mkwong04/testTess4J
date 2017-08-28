@@ -14,6 +14,8 @@ public class TestTess4j {
 		
 		instance.setDatapath(args[1]);
 		
+		instance.setLanguage("eng");
+		
 		if(args.length>2) {
 			System.out.println("Using oem : "+args[2]);
 			int ocrEngineMode = Integer.valueOf(args[2]);
